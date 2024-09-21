@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="css/layouts.css">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/index.css">
+<script src="js/mainPageLinksBlock.js"></script>
+<meta charset="UTF-8">
+<title>Сервис прайс-листов</title>
+</head>
+<body>
+	<div th:insert="~{layouts/header :: header}"></div>
+
+	<div class="container">
+
+		<div class="btn-group" style="width: 100%">
+			<button onclick="window.location.href='/customized-pricelist'" style="width: 33.3%">Создать индивидуальный прайс-лист</button>
+			<button onclick="window.location.href='/arrival'" style="width: 33.3%">Создать прайс-листы нового поступления</button>
+			<button onclick="window.location.href='/refresh'" style="width: 33.3%">Запустить обновление прайс-листов</button>
+		</div>
+
+		<!-- Tab links -->
+		<div class="tab">
+			<button class="tablinks" onclick="openCity(event, 'wholesaleAdvanced')" id="defaultOpen">Оптовые (продвинутые)</button>
+			<button class="tablinks" onclick="openCity(event, 'wholesaleSimple')">Оптовые (простые)</button>
+			<button class="tablinks" onclick="openCity(event, 'retailAdvanced')">Розничные (продвинутые)</button>
+			<button class="tablinks" onclick="openCity(event, 'retailSimple')">Розничные (простые)</button>
+		</div>
+
+		<!-- Tab content -->
+		<div id="wholesaleAdvanced" class="tabcontent">
+			<h2 class="title">Общие прайс-листы</h2>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Общий прайс-лист (оптовые цены).xlsx">Общий прайс-лист (все склады)</a>
+				</p>
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - г.Москва (оптовые цены).xlsx">Общий прайс-лист (г. Москва)</a>
+				</p>
+			</div>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - г.Хабаровск (оптовые цены).xlsx">Общий прайс-лист (г. Хабаровск)</a>
+				</p>
+			</div>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - г.Новосибирск (оптовые цены).xlsx">Общий прайс-лист (г. Новосибирск)</a>
+				</p>
+			</div>
+
+			<h2 class="title">Faw</h2>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Грузовики Faw (оптовые цены).xlsx">Грузовики FAW (все склады)</a>
+				</p>
+			</div>
+
+			<h2 class="title">Fuso</h2>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Fuso Canter (оптовые цены).xlsx">Fuso Canter (все склады)</a>
+				</p>
+			</div>
+
+			<h2 class="title">Hino</h2>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Hino 300 (Dutro) (оптовые цены).xlsx">Hino 300 (Dutro) (все склады)</a>
+				</p>
+			</div>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Hino 500 (Ranger) (оптовые цены).xlsx">Hino 500 (Ranger) (все склады)</a>
+				</p>
+			</div>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Hino 700 (Profia) (оптовые цены).xlsx">Hino 700 (Profia) (все склады)</a>
+				</p>
+			</div>
+
+			<h2 class="title">Howo</h2>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Грузовики Howo (оптовые цены).xlsx">Грузовики Howo (все склады)</a>
+				</p>
+			</div>
+
+			<h2 class="title">Hyundai</h2>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Hyundai HD35-HD78, Mighty (оптовые цены).xlsx">Hyundai HD35-HD78 / Mighty (все склады)</a>
+				</p>
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Hyundai County (оптовые цены).xlsx">Hyundai County (все склады)</a>
+				</p>
+			</div>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Hyundai HD120-HD210, Gold (оптовые цены).xlsx">Hyundai HD120-HD210 / Gold (все склады)</a>
+				</p>
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Hyundai Porter, H100 (оптовые цены).xlsx">Hyundai Porter / H100 (все склады)</a>
+				</p>
+			</div>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Hyundai HD250-HD270 (оптовые цены).xlsx">Hyundai HD250-HD270 (все склады)</a>
+				</p>
+			</div>
+
+			<h2 class="title">Isuzu</h2>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Isuzu C&E-series (оптовые цены).xlsx">Isuzu C&E-series (все склады)</a>
+				</p>
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Isuzu Q-series (оптовые цены).xlsx">Isuzu Q-series (все склады)</a>
+				</p>
+			</div>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Isuzu F&G-series (оптовые цены).xlsx">Isuzu F&G-series (все склады)</a>
+				</p>
+			</div>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Isuzu N-series (оптовые цены).xlsx">Isuzu N-series (все склады)</a>
+				</p>
+			</div>
+
+			<h2 class="title">Iveco</h2>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Грузовики Iveco (оптовые цены).xlsx">Грузовики Iveco (все склады)</a>
+				</p>
+			</div>
+
+			<h2 class="title">Jac</h2>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Jac N25 (оптовые цены).xlsx">Jac N25 (все склады)</a>
+				</p>
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Jac N75 (оптовые цены).xlsx">Jac N75 (все склады)</a>
+				</p>
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Jac N120 (оптовые цены).xlsx">Jac N120 (все склады)</a>
+				</p>
+			</div>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Jac N35 (оптовые цены).xlsx">Jac N35 (все склады)</a>
+				</p>
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Jac N80 (оптовые цены).xlsx">Jac N80 (все склады)</a>
+				</p>
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Jac N200 (оптовые цены).xlsx">Jac N200 (все склады)</a>
+				</p>
+			</div>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Jac N56 (оптовые цены).xlsx">Jac N56 (все склады)</a>
+				</p>
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Jac N90 (оптовые цены).xlsx">Jac N90 (все склады)</a>
+				</p>
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Jac N350 (оптовые цены).xlsx">Jac N350 (все склады)</a>
+				</p>
+			</div>
+
+			<h2 class="title">Kamaz</h2>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Камаз Компас-5 (оптовые цены).xlsx">Камаз Компас-5 (все склады)</a>
+				</p>
+			</div>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Камаз Компас-9 (оптовые цены).xlsx">Камаз Компас-9 (все склады)</a>
+				</p>
+			</div>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Камаз Компас-12 (оптовые цены).xlsx">Камаз Компас-12 (все склады)</a>
+				</p>
+			</div>
+
+			<h2 class="title">Kia</h2>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Kia Bongo (оптовые цены).xlsx">Kia Bongo (все склады)</a>
+				</p>
+			</div>
+
+			<h2 class="title">Man</h2>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Грузовики Man (оптовые цены).xlsx">Грузовики Man (все склады)</a>
+				</p>
+			</div>
+
+			<h2 class="title">Mazda</h2>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Mazda Titan (оптовые цены).xlsx">Mazda Titan (все склады)</a>
+				</p>
+			</div>
+
+			<h2 class="title">Mercedes</h2>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Грузовики Mercedes (оптовые цены).xlsx">Грузовики Mercedes (все склады)</a>
+				</p>
+			</div>
+
+			<h2 class="title">Nissan</h2>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Nissan Atlas, Cabstar, Condor (оптовые цены).xlsx">Nissan Atlas / Cabstar / Condor (все склады)</a>
+				</p>
+			</div>
+
+			<h2 class="title">Scania</h2>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Грузовики Scania (оптовые цены).xlsx">Грузовики Scania (все склады)</a>
+				</p>
+			</div>
+
+			<h2 class="title">Shacman (Shaanxi)</h2>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Грузовики Shacman (Shaanxi) (оптовые цены).xlsx">Грузовики Shacman (Shaanxi) (все склады)</a>
+				</p>
+			</div>
+
+			<h2 class="title">Sitrak</h2>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Грузовики Sitrak (оптовые цены).xlsx">Грузовики Sitrak (все склады)</a>
+				</p>
+			</div>
+
+			<h2 class="title">Toyota</h2>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Toyota Dyna, ToyoAce (оптовые цены).xlsx">Toyota Dyna / ToyoAce (все склады)</a>
+				</p>
+			</div>
+
+			<h2 class="title">Volvo</h2>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/advanced/Сайт-компании.com - Грузовики Volvo (оптовые цены).xlsx">Грузовики Volvo (все склады)</a>
+				</p>
+			</div>
+		</div>
+		
+		<div id="retailAdvanced" class="tabcontent">
+			<h2 class="title">Общие прайс-листы</h2>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Общий прайс-лист (розничные цены).xlsx">Общий прайс-лист (все склады)</a>
+                </p>
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - г.Москва (розничные цены).xlsx">Общий прайс-лист (г. Москва)</a>
+                </p>
+            </div>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - г.Хабаровск (розничные цены).xlsx">Общий прайс-лист (г. Хабаровск)</a>
+                </p>
+            </div>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - г.Новосибирск (розничные цены).xlsx">Общий прайс-лист (г. Новосибирск)</a>
+                </p>
+            </div>
+
+            <h2 class="title">Faw</h2>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Грузовики Faw (розничные цены).xlsx">Грузовики FAW (все склады)</a>
+                </p>
+            </div>
+
+            <h2 class="title">Fuso</h2>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Fuso Canter (розничные цены).xlsx">Fuso Canter (все склады)</a>
+                </p>
+            </div>
+
+            <h2 class="title">Hino</h2>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Hino 300 (Dutro) (розничные цены).xlsx">Hino 300 (Dutro) (все склады)</a>
+                </p>
+            </div>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Hino 500 (Ranger) (розничные цены).xlsx">Hino 500 (Ranger) (все склады)</a>
+                </p>
+            </div>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Hino 700 (Profia) (розничные цены).xlsx">Hino 700 (Profia) (все склады)</a>
+                </p>
+            </div>
+
+            <h2 class="title">Howo</h2>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Грузовики Howo (розничные цены).xlsx">Грузовики Howo (все склады)</a>
+                </p>
+            </div>
+
+            <h2 class="title">Hyundai</h2>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Hyundai HD35-HD78, Mighty (розничные цены).xlsx">Hyundai HD35-HD78 / Mighty (все склады)</a>
+                </p>
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Hyundai County (розничные цены).xlsx">Hyundai County (все склады)</a>
+                </p>
+            </div>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Hyundai HD120-HD210, Gold (розничные цены).xlsx">Hyundai HD120-HD210 / Gold (все склады)</a>
+                </p>
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Hyundai Porter, H100 (розничные цены).xlsx">Hyundai Porter / H100 (все склады)</a>
+                </p>
+            </div>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Hyundai HD250-HD270 (розничные цены).xlsx">Hyundai HD250-HD270 (все склады)</a>
+                </p>
+            </div>
+
+            <h2 class="title">Isuzu</h2>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Isuzu C&E-series (розничные цены).xlsx">Isuzu C&E-series (все склады)</a>
+                </p>
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Isuzu Q-series (розничные цены).xlsx">Isuzu Q-series (все склады)</a>
+                </p>
+            </div>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Isuzu F&G-series (розничные цены).xlsx">Isuzu F&G-series (все склады)</a>
+                </p>
+            </div>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Isuzu N-series (розничные цены).xlsx">Isuzu N-series (все склады)</a>
+                </p>
+            </div>
+
+            <h2 class="title">Iveco</h2>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Грузовики Iveco (розничные цены).xlsx">Грузовики Iveco (все склады)</a>
+                </p>
+            </div>
+
+            <h2 class="title">Jac</h2>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Jac N25 (розничные цены).xlsx">Jac N25 (все склады)</a>
+                </p>
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Jac N75 (розничные цены).xlsx">Jac N75 (все склады)</a>
+                </p>
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Jac N120 (розничные цены).xlsx">Jac N120 (все склады)</a>
+                </p>
+            </div>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Jac N35 (розничные цены).xlsx">Jac N35 (все склады)</a>
+                </p>
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Jac N80 (розничные цены).xlsx">Jac N80 (все склады)</a>
+                </p>
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Jac N200 (розничные цены).xlsx">Jac N200 (все склады)</a>
+                </p>
+            </div>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Jac N56 (розничные цены).xlsx">Jac N56 (все склады)</a>
+                </p>
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Jac N90 (розничные цены).xlsx">Jac N90 (все склады)</a>
+                </p>
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Jac N350 (розничные цены).xlsx">Jac N350 (все склады)</a>
+                </p>
+            </div>
+
+            <h2 class="title">Kamaz</h2>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Камаз Компас-5 (розничные цены).xlsx">Камаз Компас-5 (все склады)</a>
+                </p>
+            </div>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Камаз Компас-9 (розничные цены).xlsx">Камаз Компас-9 (все склады)</a>
+                </p>
+            </div>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Камаз Компас-12 (розничные цены).xlsx">Камаз Компас-12 (все склады)</a>
+                </p>
+            </div>
+
+            <h2 class="title">Kia</h2>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Kia Bongo (розничные цены).xlsx">Kia Bongo (все склады)</a>
+                </p>
+            </div>
+
+            <h2 class="title">Man</h2>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Грузовики Man (розничные цены).xlsx">Грузовики Man (все склады)</a>
+                </p>
+            </div>
+
+            <h2 class="title">Mazda</h2>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Mazda Titan (розничные цены).xlsx">Mazda Titan (все склады)</a>
+                </p>
+            </div>
+
+            <h2 class="title">Mercedes</h2>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Грузовики Mercedes (розничные цены).xlsx">Грузовики Mercedes (все склады)</a>
+                </p>
+            </div>
+
+            <h2 class="title">Nissan</h2>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Nissan Atlas, Cabstar, Condor (розничные цены).xlsx">Nissan Atlas / Cabstar / Condor (все склады)</a>
+                </p>
+            </div>
+
+            <h2 class="title">Scania</h2>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Грузовики Scania (розничные цены).xlsx">Грузовики Scania (все склады)</a>
+                </p>
+            </div>
+
+            <h2 class="title">Shacman (Shaanxi)</h2>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Грузовики Shacman (Shaanxi) (розничные цены).xlsx">Грузовики Shacman (Shaanxi) (все склады)</a>
+                </p>
+            </div>
+
+            <h2 class="title">Sitrak</h2>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Грузовики Sitrak (розничные цены).xlsx">Грузовики Sitrak (все склады)</a>
+                </p>
+            </div>
+
+            <h2 class="title">Toyota</h2>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Toyota Dyna, ToyoAce (розничные цены).xlsx">Toyota Dyna / ToyoAce (все склады)</a>
+                </p>
+            </div>
+
+            <h2 class="title">Volvo</h2>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/advanced/Сайт-компании.com - Грузовики Volvo (розничные цены).xlsx">Грузовики Volvo (все склады)</a>
+                </p>
+            </div>
+		</div>
+
+		<div id="wholesaleSimple" class="tabcontent">
+			<h2 class="title">Общие прайс-листы</h2>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/simple/Сайт-компании.com - г.Хабаровск (оптовые цены).xlsx">Общий прайс-лист (г. Хабаровск)</a>
+				</p>
+			</div>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/simple/Сайт-компании.com - г.Новосибирск (оптовые цены).xlsx">Общий прайс-лист (г. Новосибирск)</a>
+				</p>
+			</div>
+
+			<div class="tabcol">
+				<p>
+					<a href="pricelists/simple/Сайт-компании.com - г.Москва (оптовые цены).xlsx">Общий прайс-лист (г. Москва)</a>
+				</p>
+			</div>
+		</div>
+
+		<div id="retailSimple" class="tabcontent">
+			<h2 class="title">Общие прайс-листы</h2>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/simple/Сайт-компании.com - г.Хабаровск (розничные цены).xlsx">Общий прайс-лист (г. Хабаровск)</a>
+                </p>
+            </div>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/simple/Сайт-компании.com - г.Новосибирск (розничные цены).xlsx">Общий прайс-лист (г. Новосибирск)</a>
+                </p>
+            </div>
+
+            <div class="tabcol">
+                <p>
+                    <a href="pricelists/simple/Сайт-компании.com - г.Москва (розничные цены).xlsx">Общий прайс-лист (г. Москва)</a>
+                </p>
+            </div>
+		</div>
+
+		<script>
+			// Get the element with id="defaultOpen" and click on it
+			document.getElementById("defaultOpen").click();
+		</script>
+	</div>
+
+	<div th:insert="~{layouts/footer :: footer}"></div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+a.btn {
+	background: #8C959D;
+	color: #fff;
+	padding: 1rem 1.5rem;
+	text-decoration: none;
+	border-radius: 3px;
+	width: 350;
+}
+
+div.btn-group button {
+	background-color: #4CAF50;
+	border: 1px solid green;
+	color: white;
+	padding: 10px 24px;
+	cursor: pointer;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+div.btn-group button:not(:last-child) {
+	border-right: none;
+}
+
+div.btn-group:after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+div.btn-group button:hover {
+	background-color: #3e8e41;
+}
+
+div.tabcol {
+	display: table-cell;
+	width: 370px;
+	padding: 16px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font: 10pt arial;
+}
+
+.inputField {
+	font: 10pt arial;
+	width: 100%;
+	height: 22px;
+}
+
+div.buttom-btn-group button {
+	background-color: #008080;
+	font: bold 10pt arial;
+	border: 4px solid white;
+	color: white;
+	padding: 10px 24px;
+	cursor: pointer;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+div.buttom-clear-btn-group button {
+	background-color: #A52A2A;
+	border: 4px solid white;
+	color: white;
+	padding: 10px 24px;
+	cursor: pointer;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+div.buttom-btn-group button:not(:last-child) {
+	border-right: none;
+}
+
+div.buttom-btn-group:after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+div.buttom-btn-group button:hover {
+	background-color: black;
+}

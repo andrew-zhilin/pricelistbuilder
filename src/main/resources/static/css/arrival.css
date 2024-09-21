@@ -1,0 +1,76 @@
+/* MAIN BUTTON */
+  
+a.btn {
+    background: #8C959D; /* Серый цвет фона */
+    color: #fff; /* Белый цвет текста */
+    padding: 1rem 1.5rem; /* Поля вокруг текста */
+    text-decoration: none; /* Убираем подчёркивание */
+    border-radius: 3px; /* Скругляем уголки */
+    width: 350;
+   }
+  
+div.btn-group button {
+    background-color: #4CAF50; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div.btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+div.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add a background color on hover */
+div.btn-group button:hover {
+    background-color: #3e8e41;
+} 
+  
+  div.tabcol {
+    display: table-cell;
+    width: 370px;
+    padding: 16px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font: 10pt arial;
+}
+  
+  /* Bottom buttons */
+ 
+div.buttom-btn-group button {
+    background-color: #008080;
+    font: bold 10pt arial;
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div.buttom-btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+div.buttom-btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add a background color on hover */
+div.buttom-btn-group button:hover {
+    background-color: black;
+}
